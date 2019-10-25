@@ -20,6 +20,12 @@ pipeline {
 		sh 'sudo kubectl create -f kub_App-Svc.yaml'
 		sh 'sudo kubectl get svc'
       }
+    }	
+	stage('Test') {
+      steps {
+        sh 'curl localhost:32609'
+      }
     }
+	
   }
 }
