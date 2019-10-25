@@ -4,6 +4,6 @@
 
 
 
-kubectl create -f ./kubernetes_config/k8s_deployment_config.yml
-kubectl create -f ./kubernetes_config/k8s_service_config.yml
-kubectl get all
+sudo kubectl create -f kub_App.yaml
+sudo kubectl create -f kub_App-Svc.yaml
+sudo kubectl get all
