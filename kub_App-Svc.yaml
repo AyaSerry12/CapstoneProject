@@ -10,7 +10,7 @@ spec:
   - port: 8000
     protocol: TCP
     nodePort: 32609
-    target-port: 80
+    targetPort: 80
   selector:
     app: myapp
   type: LoadBalancer
