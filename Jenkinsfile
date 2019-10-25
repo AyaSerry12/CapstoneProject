@@ -28,5 +28,11 @@ pipeline {
       }
     }
 	
+	stage('Clean') {
+      steps {
+        sh 'sudo kubectl delete deploy/myapp svc/myapp'
+      }
+    }
+	
   }
 }
