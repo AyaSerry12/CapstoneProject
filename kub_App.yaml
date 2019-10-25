@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: MyApp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: MyApp
+  template:
+    metadata:
+      labels:
+        app: MyApp
+    spec:
+      containers:
+      - name: MyApp
+        image: ayaserry/ml_project:latest
+        ports:
+        - containerPort: 80
