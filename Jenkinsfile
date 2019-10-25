@@ -13,5 +13,13 @@ pipeline {
 		sh 'sudo docker push ayaserry/ml_project:latest'
       }
     }
+	
+	stage('Cluster Deploy') {
+      steps {
+        sh 'sudo kubectl create -f kub_App.yaml'
+		sh 'sudo kubectl create -f kub_App-Svc.yaml'
+		sh 'sudo kubectl get svc'
+      }
+    }
   }
 }
